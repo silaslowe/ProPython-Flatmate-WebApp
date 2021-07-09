@@ -30,14 +30,14 @@ class ResultsPage(MethodView):
 
 
 class BillForm(Form):
-    amount = StringField("Bill Amount: ")
-    period = StringField("Bill Period: ")
+    amount = StringField("Bill Amount: ", default=100)
+    period = StringField("Bill Period: ", default="Forever")
 
-    name1 = StringField("Name: ")
-    days_in_house1 = StringField("Days in house: ")
+    name1 = StringField("Name: ", default="Sally")
+    days_in_house1 = StringField("Days in house: ", default=20)
 
-    name2 = StringField("Name: ")
-    days_in_house2 = StringField("Days in house: ")
+    name2 = StringField("Name: ", default="Tim")
+    days_in_house2 = StringField("Days in house: ", default=12)
 
     button = SubmitField("Calculate")
 
